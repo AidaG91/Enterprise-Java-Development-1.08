@@ -1,17 +1,13 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.math.BigDecimal;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        double r1 = BigDecimals.roundToHundredth(new BigDecimal("7.36588741"));
+        System.out.println("Redondeado a centésima (double): " + r1);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        BigDecimal r2 = BigDecimals.reverseSignAndRound(new BigDecimal("97.63214"));
+        System.out.println("Signo invertido y redondeado a décima (BigDecimal): " + r2);
     }
 }
