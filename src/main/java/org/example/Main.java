@@ -3,6 +3,8 @@ package org.example;
 import org.example.carinventory.Sedan;
 import org.example.carinventory.Truck;
 import org.example.carinventory.UtilityVehicle;
+import org.example.video.Movie;
+import org.example.video.TvSeries;
 
 import java.math.BigDecimal;
 
@@ -25,6 +27,14 @@ public class Main {
 
         Truck myTruck = new Truck("VIN5874123", "MAN", "Serie TGX", 547741, 2500);
         System.out.println(myTruck.getInfo());
+
+        //Video exercise
+
+        TvSeries show = new TvSeries("Breaking Bad", 480, 12);
+        Movie film = new Movie("Django Unchained", 130, 4.7);
+
+        System.out.println(show.getInfo());
+        System.out.println(film.getInfo());
 
 
     }
