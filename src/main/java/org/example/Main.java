@@ -3,6 +3,8 @@ package org.example;
 import org.example.carinventory.Sedan;
 import org.example.carinventory.Truck;
 import org.example.carinventory.UtilityVehicle;
+import org.example.interfaces.IntArrayList;
+import org.example.interfaces.IntVector;
 import org.example.video.Movie;
 import org.example.video.TvSeries;
 
@@ -36,6 +38,23 @@ public class Main {
         System.out.println(show.getInfo());
         System.out.println(film.getInfo());
 
+        // IntList exercise
+        IntArrayList list = new IntArrayList();
+
+        for (int i = 0; i < 12; i++) {
+            list.add(i * 10);
+            System.out.println("Elemento en posición " + i +": " + list.get(i));
+            System.out.println("Tamaño del array: " + list.getInternalArrayLength());
+       }
+
+        //IntVector exercise
+        IntVector vector = new IntVector();
+        vector.add(12);
+        vector.add(23);
+        vector.add(34);
+
+        System.out.println("Elemento en posición 1: " + vector.get(1)); // válido
+        System.out.println("Elemento en posición 100: " + vector.get(10)); // inválido
 
     }
 }
